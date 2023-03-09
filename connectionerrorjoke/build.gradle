@@ -35,19 +35,43 @@ android {
 }
 
 
-publishing {
-    publications {
-        release(MavenPublication) {
-            groupId = 'com.github.meadetechnologies'
-            artifactId = 'connectionerrorjoke'
-            version = '1.0.0'
+//publishing {
+//    publications {
+//        release(MavenPublication) {
+//            groupId = 'com.github.meadetechnologies'
+//            artifactId = 'connectionerrorjoke'
+//            version = '1.0.0'
+//
+//            afterEvaluate {
+//                from components.release
+//            }
+//        }
+//    }
+//}
 
-            afterEvaluate {
-                from components.release
-            }
-        }
-    }
+
+
+ext {
+    PUBLISH_GROUP_ID = 'io.github.nathanmeade'
+    PUBLISH_VERSION = '1.0.0'
+    PUBLISH_ARTIFACT_ID = 'connectionerrorjoke'
+    PUBLISH_DESCRIPTION = 'ConnectionErrorJoke Android SDK'
+    PUBLISH_URL = 'https://github.com/nathanmeade/ConnectionErrorJoke'
+    PUBLISH_LICENSE_NAME = 'MIT License'
+    PUBLISH_LICENSE_URL =
+            'https://github.com/nathanmeade/ConnectionErrorJoke/blob/main/LICENSE'
+    PUBLISH_DEVELOPER_ID = 'nathanmeade'
+    PUBLISH_DEVELOPER_NAME = 'Nathan Meade'
+    PUBLISH_DEVELOPER_EMAIL = 'nathan.r.meade@gmail.com'
+    PUBLISH_SCM_CONNECTION =
+            'scm:git:github.com/nathanmeade/ConnectionErrorJoke'
+    PUBLISH_SCM_DEVELOPER_CONNECTION =
+            'scm:git:ssh://github.com/nathanmeade/ConnectionErrorJoke.git'
+    PUBLISH_SCM_URL =
+            'https://github.com/nathanmeade/ConnectionErrorJoke/tree/main'
 }
+
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
 
 dependencies {
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'

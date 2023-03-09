@@ -3,15 +3,41 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+
     }
 }
 dependencyResolutionManagement {
+    //classpath 'io.github.gradle-nexus:publish-plugin:1.1.0'
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
         maven { url "https://jitpack.io" }
+
     }
+//    dependencies {
+//
+//    }
+}
+
+ext {
+    PUBLISH_GROUP_ID = 'io.github.nathanmeade'
+    PUBLISH_VERSION = '1.0.0'
+    PUBLISH_ARTIFACT_ID = 'connectionerrorjoke'
+    PUBLISH_DESCRIPTION = 'ConnectionErrorJoke Android SDK'
+    PUBLISH_URL = 'https://github.com/nathanmeade/ConnectionErrorJoke'
+    PUBLISH_LICENSE_NAME = 'MIT License'
+    PUBLISH_LICENSE_URL =
+            'https://github.com/nathanmeade/ConnectionErrorJoke/blob/main/LICENSE'
+    PUBLISH_DEVELOPER_ID = 'nathanmeade'
+    PUBLISH_DEVELOPER_NAME = 'Nathan Meade'
+    PUBLISH_DEVELOPER_EMAIL = 'nathan.r.meade@gmail.com'
+    PUBLISH_SCM_CONNECTION =
+            'scm:git:github.com/nathanmeade/ConnectionErrorJoke'
+    PUBLISH_SCM_DEVELOPER_CONNECTION =
+            'scm:git:ssh://github.com/nathanmeade/ConnectionErrorJoke.git'
+    PUBLISH_SCM_URL =
+            'https://github.com/nathanmeade/ConnectionErrorJoke/tree/main'
 }
 rootProject.name = "ConnectionErrorJoke"
 include ':app'
