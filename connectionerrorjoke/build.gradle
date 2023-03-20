@@ -71,7 +71,7 @@ ext {
             'https://github.com/nathanmeade/ConnectionErrorJoke/tree/main'
 }
 
-apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
+//apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
 
 dependencies {
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
